@@ -51,9 +51,6 @@
         "php": "^8.2.0"
     },
     "require-dev": {
-        "illuminate/container": "^9.0.0 || ^10.0.0",
-        "orchestra/testbench": "^8.10.2",
-        "phpunit/phpunit": "^9.5.0"
     },
     "repositories": [
         {
