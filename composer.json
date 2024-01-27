@@ -63,11 +63,6 @@
             "type": "vcs",
             "url": "https://github.com/jatinp211/laravel-support",
             "no-api": true
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/jatinp211/laravel-translatable",
-            "no-api": true
         }
     ],
     "autoload": {
