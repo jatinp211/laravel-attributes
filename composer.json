@@ -61,6 +61,18 @@
         "orchestra/testbench": "^8.10.2",
         "phpunit/phpunit": "^9.5.0"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jatinp211/laravel-support",
+            "no-api": true
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/jatinp211/laravel-translatable",
+            "no-api": true
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Rinvex\\Attributes\\": "src"
