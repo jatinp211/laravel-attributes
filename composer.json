@@ -63,6 +63,13 @@
         "orchestra/testbench": "^7.0.0",
         "phpunit/phpunit": "^9.5.0"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jatinp211/laravel-translatable",
+            "no-api": true
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Rinvex\\Attributes\\": "src"
