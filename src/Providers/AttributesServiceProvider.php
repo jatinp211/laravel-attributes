@@ -47,7 +47,7 @@ class AttributesServiceProvider extends ServiceProvider
         });
 
         // Register console commands
-        $this->registerCommands($this->commands);
+        // $this->registerCommands($this->commands);
     }
 
     /**
@@ -56,8 +56,42 @@ class AttributesServiceProvider extends ServiceProvider
     public function boot()
     {
         // Publish Resources
-        $this->publishesConfig('rinvex/laravel-attributes');
-        $this->publishesMigrations('rinvex/laravel-attributes');
+        // $this->publishesConfig('rinvex/laravel-attributes');
+        // $this->publishesMigrations('rinvex/laravel-attributes');
+        // ! $this->autoloadMigrations('rinvex/laravel-attributes') || $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
+        
+        // Publish Resources
+        $package = 'rinvex/laravel-attributes';
+        $isModule = false;
+        $namespace = str_replace('laravel-', '', $package);
+        $basePath = $isModule ? $this->app->basePath($package) : $this->app->basePath('vendor/'.$package);
+        $path = $basePath.'/database/migrations';
+
+        $this->publishConfigFrom($path, $namespace);
+        $this->publishMigrationsFrom($path, $namespace);
         ! $this->autoloadMigrations('rinvex/laravel-attributes') || $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
     }
+
+    /**
+     * Can publish resources.
+     *
+     * @return bool
+     */
+    protected function publishesResources(): bool
+    {
+        return ! $this->app->environment('production') || $this->app->runningInConsole() || $this->runningInDevzone();
+    }
+
+    /**
+     * Can autoload migrations.
+     *
+     * @param string $module
+     *
+     * @return bool
+     */
+    protected function autoloadMigrations(string $module): bool
+    {
+        return $this->publishesResources() && $this->app['config'][str_replace(['laravel-', '/'], ['', '.'], $module).'.autoload_migrations'];
+    }
+
 }
