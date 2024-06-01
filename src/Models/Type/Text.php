@@ -30,6 +30,8 @@ use Rinvex\Attributes\Models\Value;
  */
 class Text extends Value
 {
+    protected $connection = 'ubiiot';
+    
     /**
      * {@inheritdoc}
      */

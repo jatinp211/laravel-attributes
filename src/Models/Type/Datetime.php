@@ -30,6 +30,8 @@ use Rinvex\Attributes\Models\Value;
  */
 class Datetime extends Value
 {
+    protected $connection = 'ubiiot';
+    
     /**
      * {@inheritdoc}
      */

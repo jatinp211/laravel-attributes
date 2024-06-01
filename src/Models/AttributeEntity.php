@@ -29,6 +29,8 @@ class AttributeEntity extends Model
         'entity_type',
     ];
 
+    protected $connection = 'ubiiot';
+    
     /**
      * {@inheritdoc}
      */

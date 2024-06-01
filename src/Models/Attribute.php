@@ -54,6 +54,8 @@ class Attribute extends Model implements Sortable
     use HasTranslations;
     use ValidatingTrait;
 
+    protected $connection = 'ubiiot';
+
     /**
      * {@inheritdoc}
      */
@@ -68,6 +70,7 @@ class Attribute extends Model implements Sortable
         'is_collection',
         'default',
         'entities',
+        'active',
     ];
 
     /**
