@@ -56,7 +56,7 @@
         "rinvex/laravel-support": "^7.2",
         "spatie/eloquent-sortable": "^4.0.0",
         "spatie/laravel-sluggable": "^3.3.0",
-        "spatie/laravel-translatable": "^5.2.0"
+        "spatie/laravel-translatable": "^6.7.1"
     },
     "require-dev": {
         "codedungeon/phpunit-result-printer": "^0.31.0",
