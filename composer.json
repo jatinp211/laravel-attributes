@@ -49,6 +49,7 @@
     ],
     "require": {
         "php": "^8.2",
+        "jeremeamia/superclosure": "*",
         "rinvex/laravel-support": "^7.2",
         "spatie/eloquent-sortable": "^4.0.0",
         "spatie/laravel-sluggable": "^3.3.0",
