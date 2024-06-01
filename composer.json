@@ -49,6 +49,9 @@
     ],
     "require": {
         "php": "^8.2",
+        "illuminate/console": "*",
+        "illuminate/database": "*",
+        "illuminate/support": "*",
         "jeremeamia/superclosure": "*",
         "rinvex/laravel-support": "^7.2",
         "spatie/eloquent-sortable": "^4.0.0",
