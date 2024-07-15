@@ -52,7 +52,7 @@
         "illuminate/console": "*",
         "illuminate/database": "*",
         "illuminate/support": "*",
-        "jeremeamia/superclosure": "*",
+        "opis/closure":"^3.6",
         "rinvex/laravel-support": "^7.2",
         "spatie/eloquent-sortable": "^4.0.0",
         "spatie/laravel-sluggable": "^3.3.0",
